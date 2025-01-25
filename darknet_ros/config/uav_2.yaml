@@ -1,8 +1,7 @@
 subscribers:
 
   camera_reading:
-    # topic: /camera/rgb/image_raw
-    topic: /video_image
+    topic: /typhoon_h480_2/cgo3_camera/image_raw
     queue_size: 1
 
 actions:
@@ -13,17 +12,17 @@ actions:
 publishers:
 
   object_detector:
-    topic: /darknet_ros/found_object
+    topic: /uav_2/darknet_ros/found_object
     queue_size: 1
     latch: false
 
   bounding_boxes:
-    topic: /darknet_ros/bounding_boxes
+    topic: /uav_2/darknet_ros/bounding_boxes
     queue_size: 1
     latch: false
 
   detection_image:
-    topic: /darknet_ros/detection_image
+    topic: /uav_2/darknet_ros/detection_image
     queue_size: 1
     latch: true
 
